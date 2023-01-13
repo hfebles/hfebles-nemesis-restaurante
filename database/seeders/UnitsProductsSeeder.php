@@ -23,5 +23,6 @@ class UnitsProductsSeeder extends Seeder
         UnitProduct::create(['name_unit_product' => 'MILIMETRO CUBICO', 'short_unit_product' => 'ML3']);
         UnitProduct::create(['name_unit_product' => 'LITRO', 'short_unit_product' => 'L']);
         UnitProduct::create(['name_unit_product' => 'MILILITRO', 'short_unit_product' => 'ML']);
+        UnitProduct::create(['name_unit_product' => 'UNIDAD', 'short_unit_product' => 'UND']);
     }
 }

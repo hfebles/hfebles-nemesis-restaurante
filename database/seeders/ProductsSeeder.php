@@ -15,88 +15,291 @@ class ProductsSeeder extends Seeder
      */
     public function run()
     {
-        Product::create([
-            'name_product' => 'Producto 1',
-            'price_product' => 15.5,
-            'product_usd_product' => 1,
-            'tax_exempt_product' => 0,
-            'qty_product' => 50,
-            'salable_product' => 1,
-            'code_product' => 'P-1',
-            'id_warehouse' => 1,
-            'id_product_category' => 1,
-            'id_unit_product' => 1,
-            'id_presentation_product' => 1,
-        ]);
+        Product::create(['name_product' => 'Harina Panadera','price_product' => 0,'product_usd_product' => 1,'qty_product' =>45,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Levadura fresca','price_product' => 0,'product_usd_product' => 1,'qty_product' =>0.5,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Conservante','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => '','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Margarina','price_product' => 4.45,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Leche líquida','price_product' => 1.64,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'Crema de leche','price_product' => 5.19,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Huevos','price_product' => 0.17,'product_usd_product' => 1,'qty_product' =>30,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'Azúcar','price_product' => 1.2,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Azúcar Pulverizada','price_product' => 0,'product_usd_product' => 1,'qty_product' =>10,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Sal','price_product' => 1.2,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Relax','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Caramelina','price_product' => 0,'product_usd_product' => 1,'qty_product' =>3.65,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Clavo de olor','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Pure de tomate','price_product' => 8.39,'product_usd_product' => 1,'qty_product' =>0.49,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Orégano seco','price_product' => 25.71,'product_usd_product' => 1,'qty_product' =>0.035,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Pure de papa','price_product' => 3.96,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'Vainilla','price_product' => 0,'product_usd_product' => 1,'qty_product' =>3.75,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'Carne mechada Frita','price_product' => 11.72,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Vegetales al horno','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Nuez moscada','price_product' => 49.6,'product_usd_product' => 1,'qty_product' =>0.453,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Nueces','price_product' => 33.33,'product_usd_product' => 1,'qty_product' =>0.3,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Cebolla en polvo','price_product' => 40.71,'product_usd_product' => 1,'qty_product' =>0.028,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'adobo badia','price_product' => 15.13,'product_usd_product' => 1,'qty_product' =>0.793,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Pimienta cayena','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Paprika','price_product' => 26.49,'product_usd_product' => 1,'qty_product' =>0.453,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Pimienta Negra','price_product' => 39.74,'product_usd_product' => 1,'qty_product' =>0.453,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'quinoa','price_product' => 17.65,'product_usd_product' => 1,'qty_product' =>0.34,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Queso Mozzarella','price_product' => 9,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'queso parmesano','price_product' => 36.06,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Queso amarillo','price_product' => 12,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Croutones','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Pan de hamburguesa','price_product' => 1.48,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'pan granjero','price_product' => 0.25,'product_usd_product' => 1,'qty_product' =>12,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'Yogurt Griego','price_product' => 9.57,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Pollo','price_product' => 4.01,'product_usd_product' => 1,'qty_product' =>1.7,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Lechoza','price_product' => 0.89,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Milanesa de pollo','price_product' => 7,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Muslo','price_product' => 54.8,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Ossobuco de Res','price_product' => 5,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Falda de res','price_product' => 7,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'solomo','price_product' => 5.9,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Lomito de Res','price_product' => 12,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Pernil de cerdo','price_product' => 6.93,'product_usd_product' => 1,'qty_product' =>8,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Lomo de cerdo','price_product' => 11,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Sardina filet','price_product' => 3,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Molleja de pollo','price_product' => 3,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Chistorras','price_product' => 29.27,'product_usd_product' => 1,'qty_product' =>0.3,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Jamón','price_product' => 14,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Jamón ahumado','price_product' => 15,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Jamón de pavo','price_product' => 15,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Tocineta','price_product' => 30,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Tomate','price_product' => 2,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Pimentón','price_product' => 2.7,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Cebolla','price_product' => 2.8,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Cebollín','price_product' => 1.35,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Célery','price_product' => 1.42,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Zanahoria','price_product' => 1.3,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Papa','price_product' => 2.14,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'aceitunas negras','price_product' => 12.57,'product_usd_product' => 1,'qty_product' =>0.35,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Batata','price_product' => 2,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'garbanzos','price_product' => 3.21,'product_usd_product' => 1,'qty_product' =>0.38,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Berenjena','price_product' => 1.85,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Calabacin','price_product' => 1.45,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Ají dulce','price_product' => 1.09,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Ajo porro','price_product' => 1.6,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Ajo','price_product' => 10,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Laurel','price_product' => 318.75,'product_usd_product' => 1,'qty_product' =>0.008,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Tomillo seco','price_product' => 109.33,'product_usd_product' => 1,'qty_product' =>0.03,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Romero','price_product' => 101.67,'product_usd_product' => 1,'qty_product' =>0.03,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Cilantro','price_product' => 4.29,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Perejil','price_product' => 2.4,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Berro','price_product' => 4.75,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Espinaca','price_product' => 10.5,'product_usd_product' => 1,'qty_product' =>0.2,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Albahaca','price_product' => 4.7,'product_usd_product' => 1,'qty_product' =>0.2,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Albahaca seca','price_product' => 128.5,'product_usd_product' => 1,'qty_product' =>0.02,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Limón','price_product' => 2.1,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Naranja','price_product' => 0.07,'product_usd_product' => 1,'qty_product' =>20,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Salsa Inglesa','price_product' => 8.67,'product_usd_product' => 1,'qty_product' =>0.15,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'Salsa de Soya','price_product' => 11.33,'product_usd_product' => 1,'qty_product' =>0.15,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'Aderezo Cesar','price_product' => 14.29,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'Repollo','price_product' => 1.21,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'Vinagre Blanco','price_product' => 1.5,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'Mostaza','price_product' => 8,'product_usd_product' => 1,'qty_product' =>0.5,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Mayonesa','price_product' => 7.21,'product_usd_product' => 1,'qty_product' =>0.39,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Siracha','price_product' => 0,'product_usd_product' => 1,'qty_product' =>0.5,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'Anchoas','price_product' => 65,'product_usd_product' => 1,'qty_product' =>0.2,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Adobo Completo','price_product' => 50,'product_usd_product' => 1,'qty_product' =>0.03,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Comino en polvo','price_product' => 50,'product_usd_product' => 1,'qty_product' =>0.03,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Aliño preparado','price_product' => 50,'product_usd_product' => 1,'qty_product' =>0.03,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Papelón','price_product' => 1.5,'product_usd_product' => 1,'qty_product' =>0.5,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Miel','price_product' => 14,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'hoja de arroz','price_product' => 0.15,'product_usd_product' => 1,'qty_product' =>20,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'Aceite vegetal de soya','price_product' => 3,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'Aceite de oliva','price_product' => 18,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'Asado negro','price_product' => 20.05,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'Pernil rebanado','price_product' => 9.05,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Cazón Guisado','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Salsa Boloña','price_product' => 11,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Crema 3 en 1','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Vainita','price_product' => 1.3,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Pimienta de piquillo','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Pulpa negra','price_product' => 7,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'Auyama','price_product' => 1,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'Apio','price_product' => 2,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'Guisantes','price_product' => 6,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'Agua','price_product' => 0.03,'product_usd_product' => 1,'qty_product' =>18,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'Sofrito Rojo','price_product' => 5.16,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Carne Molida','price_product' => 7,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Aceitunas','price_product' => 7,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Cazon','price_product' => 9,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'cazon guisado','price_product' => 27.78,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Ganso de Res','price_product' => 8,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Queso Crema','price_product' => 19.68,'product_usd_product' => 1,'qty_product' =>0.25,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Champiñones','price_product' => 21.67,'product_usd_product' => 1,'qty_product' =>0.3,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'arroz arborio','price_product' => 7.49,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'calamar','price_product' => 14,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Alioli de manzana','price_product' => 0,'product_usd_product' => 1,'qty_product' =>0.8,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Fresa','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Alioli de piquillo','price_product' => 0,'product_usd_product' => 1,'qty_product' =>0.8,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Batata','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Auyama','price_product' => 0.91,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'microgreens','price_product' => 131.6,'product_usd_product' => 1,'qty_product' =>0.025,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Almendras','price_product' => 36.35,'product_usd_product' => 1,'qty_product' =>0.2,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Avellanas','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Tomate pelado','price_product' => 7.5,'product_usd_product' => 1,'qty_product' =>0.4,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Tomillo','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Orégano','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Ajo en polvo','price_product' => 24.49,'product_usd_product' => 1,'qty_product' =>0.49,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Muchacho redondo','price_product' => 9,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Yerbabuena','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Remolacha','price_product' => 3,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Pasta de Tomate','price_product' => 8,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Polvo de Hornear','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Pulpa de cerdo molida','price_product' => 9,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Salsa pesto','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Salsa de pizza','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'Muslo de pollo','price_product' => 5,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Papas salteadas','price_product' => 3.43,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Mantequilla sin sal','price_product' => 12,'product_usd_product' => 1,'qty_product' =>0.2,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'botones','price_product' => 10,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'aros','price_product' => 10,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Aguacate','price_product' => 2,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Ensalada de papa','price_product' => 6.33,'product_usd_product' => 1,'qty_product' =>0.8,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'vino blanco','price_product' => 4,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'Ensalada cesar','price_product' => 4.48,'product_usd_product' => 1,'qty_product' =>6,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Ensalada Rusa','price_product' => 5.4,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Vegetales salteados','price_product' => 6.25,'product_usd_product' => 1,'qty_product' =>0.12,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Albondigas','price_product' => 11.61,'product_usd_product' => 1,'qty_product' =>9.902,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Tajada','price_product' => 0.29,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'Alcaparras','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Piña','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Cebolla morada','price_product' => 3,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Pimenton asado','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Pulpo','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Jugo de Naranja','price_product' => 2.5,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Jugo de Limon','price_product' => 8.44,'product_usd_product' => 1,'qty_product' =>0.25,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'ajinomoto','price_product' => 11.2,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'badia camarones','price_product' => 30.24,'product_usd_product' => 1,'qty_product' =>0.463,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'pesto','price_product' => 24.83,'product_usd_product' => 1,'qty_product' =>0.23,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Espinazo de pescado','price_product' => 1,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'fondo de vegetales','price_product' => 5.23,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Brocoli','price_product' => 2,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'mantequilla','price_product' => 13.05,'product_usd_product' => 1,'qty_product' =>0.2,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Crema de calabacin','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Crema de apio','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Crema de espinaca y Berro','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Caldo de pollo','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'Caldo de pescado','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'Consome de carne','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'Jengibre','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Pasta','price_product' => 2.2,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Vinagre de vino blanco','price_product' => 3,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'Harina de maiz Maikzel','price_product' => 2,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Sal marina','price_product' => 1.5,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Pollo limón','price_product' => 16,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Yogurt','price_product' => 15,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'Pollo al horno','price_product' => 15.43,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'pechuga de pollo','price_product' => 6.84,'product_usd_product' => 1,'qty_product' =>0.85,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Reina delgada','price_product' => 0,'product_usd_product' => 1,'qty_product' =>0.095,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Chips de batata','price_product' => 0,'product_usd_product' => 1,'qty_product' =>0.1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Maiz desgranado','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Quinoa','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Lechuga romana','price_product' => 2,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Rabano','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Vainitas','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Queso de cabra','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Vinagreta','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'Coliflor','price_product' => 3,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Harina de yuca','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Salsa de tomate','price_product' => 4.53,'product_usd_product' => 1,'qty_product' =>0.397,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Pollo guisado','price_product' => 11,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Salsa de soya kikoman','price_product' => 13.75,'product_usd_product' => 1,'qty_product' =>1.6,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'Aceite de sesamo','price_product' => 43,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'Aderezo asiatico','price_product' => 0,'product_usd_product' => 1,'qty_product' =>0.1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'Chips de kale','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Arroz','price_product' => 1.3,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Arroz Blanco','price_product' => 0.96,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Platano Verde','price_product' => 2.3,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'manzana verde','price_product' => 5.72,'product_usd_product' => 1,'qty_product' =>0.5,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Tostones de platano','price_product' => 0.57,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Aceite de oliva extra virgen','price_product' => 20,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'aderezo thai','price_product' => 14.04,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'aderezo de verano','price_product' => 12.54,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'aderezo cesar','price_product' => 14.29,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'sazonador kiki','price_product' => 19.2,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'mayonesa de limon','price_product' => 8.69,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'queso fundido','price_product' => 1.33,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'mayonesa de pesto','price_product' => 10.85,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'mayonesa de pimenton','price_product' => 8.16,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'salsa rosada','price_product' => 6.32,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'risotto base','price_product' => 3.11,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'pure de auyama','price_product' => 3.29,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'concentrado de fosforera','price_product' => 10.36,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'napoles de pasta','price_product' => 3.92,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'salpimienta','price_product' => 2.84,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Esparragos','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Mango','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Alfalfa','price_product' => 0,'product_usd_product' => 1,'qty_product' =>0.125,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Canela en polvo','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Lentejas','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Garbanzos','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Caraotas blancas','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Caraotas rojas','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Filet de Pargo','price_product' => 0,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Filet de Robalo','price_product' => 20,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Atun fresco','price_product' => 15,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'Langostinos','price_product' => 20,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'camaron','price_product' => 10,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'mix de frutos secos','price_product' => 24.15,'product_usd_product' => 1,'qty_product' =>0.284,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'durazno','price_product' => 3.13,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'vinagre balsamico','price_product' => 26.08,'product_usd_product' => 1,'qty_product' =>0.25,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'fresa congelada','price_product' => 4.71,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'pasta linguini','price_product' => 1.98,'product_usd_product' => 1,'qty_product' =>0.5,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'mejillones','price_product' => 9,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'almejas','price_product' => 8,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'espinazo de pescado','price_product' => 2,'product_usd_product' => 1,'qty_product' =>0.5,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'fondo de pescado','price_product' => 2.93,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'onoto','price_product' => 3.07,'product_usd_product' => 1,'qty_product' =>0.15,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'pabilo','price_product' => 7.75,'product_usd_product' => 1,'qty_product' =>0.04,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'hoja de hallaca','price_product' => 0.06,'product_usd_product' => 1,'qty_product' =>40,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'hallaca','price_product' => 1.6,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'pan de jamon','price_product' => 11.6,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'manzana','price_product' => 0.67,'product_usd_product' => 1,'qty_product' =>6,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'celery','price_product' => 2.5,'product_usd_product' => 1,'qty_product' =>0.3,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'ensalada de gallina','price_product' => 1.72,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'pan','price_product' => 0.33,'product_usd_product' => 1,'qty_product' =>3,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'aceite de sesamo','price_product' => 28.4,'product_usd_product' => 1,'qty_product' =>0.15,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'salsa de ostras','price_product' => 7.45,'product_usd_product' => 1,'qty_product' =>0.2,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'recortes','price_product' => 14,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'arroz parvorizado','price_product' => 1.69,'product_usd_product' => 1,'qty_product' =>0.8,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'churrasco de pollo','price_product' => 7.57,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'crutones','price_product' => 11.7,'product_usd_product' => 1,'qty_product' =>0.1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'caraotas','price_product' => 3.08,'product_usd_product' => 1,'qty_product' =>0.5,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'huesito ahumado','price_product' => 9.24,'product_usd_product' => 1,'qty_product' =>0.5,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'aceite verde','price_product' => 5.9,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'masa de arepa','price_product' => 0.87,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'masa de empanada','price_product' => 1.38,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'relleno de carne molida','price_product' => 5.56,'product_usd_product' => 1,'qty_product' =>2,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'salchicha','price_product' => 12.71,'product_usd_product' => 1,'qty_product' =>0.8,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'relleno de pollo','price_product' => 12.05,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'relleno de salchicha','price_product' => 17.35,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'queso llanero','price_product' => 5.44,'product_usd_product' => 1,'qty_product' =>0.5,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'masa de pastelito','price_product' => 0.2,'product_usd_product' => 1,'qty_product' =>20,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'jamon de espalda','price_product' => 9.35,'product_usd_product' => 1,'qty_product' =>0.2,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'queso amarillo','price_product' => 9.8,'product_usd_product' => 1,'qty_product' =>0.25,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'mortadela','price_product' => 3.44,'product_usd_product' => 1,'qty_product' =>0.5,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'salsa rosada','price_product' => 6.32,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'queso telita','price_product' => 9.88,'product_usd_product' => 1,'qty_product' =>0.5,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'masa de cachapa','price_product' => 0.24,'product_usd_product' => 1,'qty_product' =>10,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'carbon','price_product' => 1.61,'product_usd_product' => 1,'qty_product' =>3,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'cubito','price_product' => 22.5,'product_usd_product' => 1,'qty_product' =>0.092,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'chorizo de ajo','price_product' => 0.97,'product_usd_product' => 1,'qty_product' =>5,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'morcilla','price_product' => 0.8,'product_usd_product' => 1,'qty_product' =>4,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'papas fritas','price_product' => 4.51,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'vinagre de manzana','price_product' => 6.98,'product_usd_product' => 1,'qty_product' =>0.5,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'mantequilla de mani','price_product' => 17.85,'product_usd_product' => 1,'qty_product' =>0.2,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'vinagre de arroz','price_product' => 6.4,'product_usd_product' => 1,'qty_product' =>0.5,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'quinoa cocida','price_product' => 8.63,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'aderezo mediterraneo','price_product' => 12.25,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'salmon','price_product' => 8.25,'product_usd_product' => 1,'qty_product' =>1,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 9, 'merma' => 0]);
+Product::create(['name_product' => 'menta','price_product' => 1.7,'product_usd_product' => 1,'qty_product' =>0.3,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'tomate cherry','price_product' => 10,'product_usd_product' => 1,'qty_product' =>0.3,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'bocconcini','price_product' => 12.33,'product_usd_product' => 1,'qty_product' =>0.4,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
+Product::create(['name_product' => 'mezcla de nueces','price_product' => 22.78,'product_usd_product' => 1,'qty_product' =>0.936,'salable_product' => 0,'id_warehouse' => 1,'id_unit_product' => 1, 'merma' => 0]);
 
-        Product::create([
-            'name_product' => 'Producto 2',
-            'price_product' => 28.6,
-            'product_usd_product' => 1,
-            'tax_exempt_product' => 1,
-            'qty_product' => 50,
-            'code_product' => 'P-2',
-            'salable_product' => 1,
-            'id_warehouse' => 1,
-            'id_product_category' => 1,
-            'id_unit_product' => 1,
-            'id_presentation_product' => 1,
-        ]);
-
-        Product::create([
-            'name_product' => 'Producto 3',
-            'price_product' => 56.5,
-            'product_usd_product' => 1,
-            'tax_exempt_product' => 0,
-            'qty_product' => 50,
-            'salable_product' => 0,
-            'code_product' => 'P-3',
-            'id_warehouse' => 2,
-            'id_product_category' => 1,
-            'id_unit_product' => 1,
-            'id_presentation_product' => 1,
-        ]);
-
-        Product::create([
-            'name_product' => 'Producto 4',
-            'price_product' => 250.35,
-            'product_usd_product' => 0,
-            'tax_exempt_product' => 0,
-            'qty_product' => 50,
-            'code_product' => 'P-4',
-            'salable_product' => 0,
-            'id_warehouse' => 2,
-            'id_product_category' => 1,
-            'id_unit_product' => 1,
-            'id_presentation_product' => 1,
-        ]);
-
-        Product::create([
-            'name_product' => 'Producto 5',
-            'price_product' => 300,
-            'product_usd_product' => 0,
-            'tax_exempt_product' => 1,
-            'qty_product' => 50,
-            'code_product' => 'P-5',
-            'salable_product' => 1,
-            'id_warehouse' => 1,
-            'id_product_category' => 1,
-            'id_unit_product' => 1,
-            'id_presentation_product' => 1,
-        ]);
-
-        Product::create([
-            'name_product' => 'Producto 6',
-            'price_product' => 100,
-            'product_usd_product' => 0,
-            'tax_exempt_product' => 0,
-            'code_product' => 'P-6',
-            'qty_product' => 50,
-            'salable_product' => 0,
-            'id_warehouse' => 2,
-            'id_product_category' => 1,
-            'id_unit_product' => 1,
-            'id_presentation_product' => 1,
-        ]);
     }
 }

@@ -46,17 +46,17 @@ class ProductController extends Controller
         $table = [
             'c_table' => 'table table-bordered table-hover mb-0 text-uppercase',
             'c_thead' => 'bg-dark text-white',
-            'ths' => ['#', 'Almacen', 'Código', 'Producto', 'Disponible'],
-            'w_ts' => ['3', '15', '7', '68', '7',],
+            'ths' => ['#', 'Almacen', 'Producto', 'Disponible'],
+            'w_ts' => ['3', '15', '68', '7',],
             'c_ths' =>
             [
-                'text-center align-middle',
                 'text-center align-middle',
                 'text-center align-middle',
                 'align-middle',
                 'text-center align-middle',
             ],
-            'tds' => ['name_warehouse', 'code_product', 'name_product', 'qty_product'],
+            'td_number' => [false, false, true,],
+            'tds' => ['name_warehouse', 'name_product', 'qty_product'],
             'switch' => false,
             'edit' => false,
             'show' => true,
@@ -144,18 +144,16 @@ class ProductController extends Controller
     public function show(Request $request, $id)
     {
 
-        $data = Product::select('products.*', 'w.name_warehouse', 'w.code_warehouse', 'c.name_product_category', 'u.name_unit_product', 'u.short_unit_product', 'pp.name_presentation_product')
+        $data = Product::select('products.*', 'w.name_warehouse', 'w.code_warehouse', 'u.name_unit_product', 'u.short_unit_product',)
             ->join('warehouses as w', 'w.id_warehouse', '=', 'products.id_warehouse', 'left')
             ->join('unit_products as u', 'u.id_unit_product', '=', 'products.id_unit_product', 'left outer')
-            ->join('product_categories as c', 'c.id_product_category', '=', 'products.id_product_category', 'left outer')
-            ->join('presentation_products as pp', 'pp.id_presentation_product', '=', 'products.id_presentation_product', 'left outer')
             ->whereIdProduct($id)->get()[0];
 
         $tableData = ProductHistory::select('p.code_product', 'p.name_product', 'product_histories.date_product_history', 'product_histories.price_product_history', 'product_histories.qty_product_history')
             ->join('products as p', 'p.id_product', '=', 'product_histories.id_product')
             ->where('product_histories.id_product', '=', $id)->paginate(5);
 
-        //return $getHistory;
+        //return $data;
 
         $table = [
             'c_table' => 'table table-bordered table-hover mb-0 text-uppercase',

@@ -20,13 +20,14 @@ class MenusTableSeeder extends Seeder
     {
         Menu::create(['id' => 1, 'name' => 'Ventas', 'slug' => '/', 'grupo' => 'sales', 'icono' => 'fa-solid fa-file-invoice', 'parent' => '0', 'order' => '0', 'href' => '0',]);
         Menu::create(['id' => 2, 'name' => 'Facturación', 'slug' => '/', 'grupo' => 'invoices', 'icono' => 'fa-solid fa-file-invoice', 'parent' => '0', 'order' => '1', 'href' => '1', ]);
-        Menu::create(['id' => 3, 'name' => 'Contabilidad', 'slug' => '/', 'grupo' => 'accounting', 'icono' => 'fa-sharp fa-solid fa-book', 'parent' => '0', 'order' => '3', 'href' => '0',]);
-        Menu::create(['id' => 4, 'name' => 'Almacen', 'slug' => '/', 'grupo' => 'warehouse', 'icono' => 'fa-sharp fa-solid fa-warehouse', 'parent' => '0', 'order' => '4', 'href' => '0',]);
-        Menu::create(['id' => 5, 'name' => 'Nomina', 'slug' => '/', 'grupo' => '', 'icono' => '', 'parent' => '0', 'order' => '6', 'href' => '0', 'enabled' => 0]);
-        Menu::create(['id' => 6, 'name' => 'RRHH', 'slug' => '/', 'grupo' => 'rrhh', 'icono' => 'fa-sharp fa-solid fa-address-card', 'parent' => '0', 'order' => '7', 'href' => '1', ]);
+        //Menu::create(['id' => 3, 'name' => 'Contabilidad', 'slug' => '/', 'grupo' => 'accounting', 'icono' => 'fa-sharp fa-solid fa-book', 'parent' => '0', 'order' => '3', 'href' => '0',]);
+        Menu::create(['id' => 4, 'name' => 'Almacen', 'slug' => '/', 'grupo' => 'warehouse', 'icono' => 'fa-sharp fa-solid fa-warehouse', 'parent' => '0', 'order' => '2', 'href' => '0',]);
+        //Menu::create(['id' => 5, 'name' => 'Nomina', 'slug' => '/', 'grupo' => '', 'icono' => '', 'parent' => '0', 'order' => '6', 'href' => '0', 'enabled' => 0]);
+        //Menu::create(['id' => 6, 'name' => 'RRHH', 'slug' => '/', 'grupo' => 'rrhh', 'icono' => 'fa-sharp fa-solid fa-address-card', 'parent' => '0', 'order' => '7', 'href' => '1', ]);
         Menu::create(['id' => 7, 'name' => 'Configuraciones','slug' => '/','grupo' => 'mantenice','icono' => 'fa-solid fa-screwdriver-wrench','parent' => '0','order' => '10','href' => '0',]);
-        Menu::create(['id' => 8, 'name' => 'Producción','slug' => '/','grupo' => 'production','icono' => 'fa-solid fa-screwdriver-wrench','parent' => '0','order' => '8','href' => '0',]);
-        Menu::create(['id' => 9, 'name' => 'Despachos','slug' => '/','grupo' => 'delivery','icono' => 'fa-solid fa-screwdriver-wrench','parent' => '0','order' => '5','href' => '0',]);
+        //Menu::create(['id' => 8, 'name' => 'Producción','slug' => '/','grupo' => 'production','icono' => 'fa-solid fa-screwdriver-wrench','parent' => '0','order' => '8','href' => '0',]);
+        //Menu::create(['id' => 9, 'name' => 'Despachos','slug' => '/','grupo' => 'delivery','icono' => 'fa-solid fa-screwdriver-wrench','parent' => '0','order' => '5','href' => '0',]);
+        Menu::create(['id' => 46, 'name' => 'Menus','slug' => '/', 'grupo' => 'menus','icono' => 'fa-solid fa-screwdriver-wrench','parent' => '0','order' => '3','href' => '1',]);
 
 
         //VENTAS
@@ -85,6 +86,13 @@ class MenusTableSeeder extends Seeder
         Menu::create(['id' => 43, 'name' => 'Retenciones de iva Compras', 'slug' => 'withholding-purchases.index', 'grupo' => 'accounting-withholding-purchases', 'icono' => 'fa-sharp fa-solid fa-table-list', 'parent' => '39', 'order' => '3', 'href' => '0', ]);
         Menu::create(['id' => 44, 'name' => 'Configuracion Ordenes de Compra', 'slug' => 'order-config.index', 'grupo' => 'purchase-order-config', 'icono' => 'fa-sharp fa-solid fa-table-list', 'parent' => '39', 'order' => '4', 'href' => '0', ]);
         Menu::create(['id' => 45, 'name' => 'Configuracion Compras', 'slug' => 'purchase-config.index', 'grupo' => 'purchase-config-list', 'icono' => 'fa-sharp fa-solid fa-table-list', 'parent' => '39', 'order' => '5', 'href' => '0', ]);
+    
+        //MENUS
+
+        //Menu::create(['id' => 47, 'name' => 'Recetas', 'slug' => 'recetas.index', 'grupo' => 'menus-clients', 'icono' => 'fa-solid fa-users', 'parent' => '1', 'order' => '0', 'href' => '0', ]);
+    
+    
     }
 
 }
+    

@@ -26,7 +26,7 @@ class WorkersController extends Controller
 
         $data = Workers::select('workers.*', 'gw.name_group_worker')
             ->join('group_workers as gw', 'gw.id_group_worker', '=', 'workers.id_group_worker')
-            ->whereEnabledWorker(1)->paginate(10);
+            ->whereEnabledWorker(1)->paginate(15);
         //return $data;
         $conf = [
             'title-section' => 'Trabajadores',
@@ -57,7 +57,7 @@ class WorkersController extends Controller
             'url' => "/hhrr/workers",
             'id' => 'id_worker',
             'data' => $data,
-            'i' => (($request->input('page', 1) - 1) * 5),
+            'i' => (($request->input('page', 1) - 1) * 15),
         ];
 
         return view('rrhh.workers.index', compact('table', 'conf'));

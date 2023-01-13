@@ -15,14 +15,16 @@ class WarehouseSeeder extends Seeder
     public function run()
     {
         Warehouse::create([
-            'name_warehouse' => 'producto terminado',
-            'code_warehouse' => 'pt'
+            'name_warehouse' => strtoupper('materia prima'),
+            'code_warehouse' => strtoupper('mp')
+        ]);
+        
+        Warehouse::create([
+            'name_warehouse' => strtoupper('producto terminado'),
+            'code_warehouse' => strtoupper('pt')
         ]);
 
-        Warehouse::create([
-            'name_warehouse' => 'materia prima',
-            'code_warehouse' => 'mp'
-        ]);
+        
 
     }
 }
