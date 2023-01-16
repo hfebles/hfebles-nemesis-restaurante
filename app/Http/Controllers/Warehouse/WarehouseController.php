@@ -46,8 +46,8 @@ class WarehouseController extends Controller
             'edit_modal' => false, 
             'url' => "/warehouse/warehouse",
             'id' => 'id_warehouse',
-            'data' => Warehouse::where('enabled_warehouse', '=', '1')->paginate(10),
-            'i' => (($request->input('page', 1) - 1) * 5),
+            'data' => Warehouse::where('enabled_warehouse', '=', '1')->paginate(15),
+            'i' => (($request->input('page', 1) - 1) * 15),
         ];
 
         return view('warehouse.warehouse.index', compact('conf', 'table'));
@@ -67,7 +67,8 @@ class WarehouseController extends Controller
 
     public function show(Request $request, $id){
 
-        $getDataWarehouse = Warehouse::whereEnabledWarehouse(1)->whereIdWarehouse($id)->get()[0];
+        $getDataWarehouse = Warehouse::find($id);
+
 
 
         $conf = [

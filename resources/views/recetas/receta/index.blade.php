@@ -8,7 +8,6 @@
 
 @section('content')
     <div class="row">
-
             <x-cards size="12" :table="$table" />
     </div>
     

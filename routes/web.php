@@ -54,6 +54,7 @@ use App\Http\Controllers\Production\ProductionOrderController;
 use App\Http\Controllers\Purchase\PurchaseController;
 use App\Http\Controllers\Purchase\PurchaseOrderController;
 use App\Http\Controllers\Purchase\SupplierController;
+use App\Http\Controllers\Recetas\RecetasController;
 use App\Http\Controllers\Sales\DeliveryNotesController;
 use App\Http\Controllers\Sales\InvoicingController;
 use App\Models\Payments\Surplus;
@@ -371,4 +372,12 @@ Route::group(['middleware' => ['auth']], function () {
      * FIN COMPRAS
      * 
      */
+
+
+     //recetas
+
+     Route::resource('/recetas/recetas', RecetasController::class);
+     Route::post('/recetas/listar', [RecetasController::class, 'listar'])->name('recetas.listar');
+
+     Route::get('/recetas/impimir-lista-comras/{id}/{cant}', [RecetasController::class, 'imprimir_lista_compras'])->name('recetas.imprimir-lista-compras');
 });

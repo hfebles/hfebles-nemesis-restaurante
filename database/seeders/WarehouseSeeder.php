@@ -18,6 +18,11 @@ class WarehouseSeeder extends Seeder
             'name_warehouse' => strtoupper('materia prima'),
             'code_warehouse' => strtoupper('mp')
         ]);
+
+        Warehouse::create([
+            'name_warehouse' => strtoupper('sub-recetas'),
+            'code_warehouse' => strtoupper('sr')
+        ]);
         
         Warehouse::create([
             'name_warehouse' => strtoupper('producto terminado'),

@@ -13,7 +13,7 @@ use App\Models\Warehouse\ProductHistory;
 use App\Models\Conf\Warehouse\PresentationProduct;
 use App\Models\Conf\Warehouse\UnitProduct;
 use App\Models\Conf\Warehouse\ProductCategory;
-
+use App\Models\Recetas\Recetas;
 
 class ProductController extends Controller
 {
@@ -29,9 +29,9 @@ class ProductController extends Controller
     {
 
         if ($request->param == 1) {
-            $data = Product::select('products.*', 'warehouses.name_warehouse')->whereSalableProduct(1)->whereEnabledProduct(1)->join('warehouses', 'warehouses.id_warehouse', '=', 'products.id_warehouse')->paginate(15);
+            $data = Product::select('products.*', 'warehouses.name_warehouse')->whereSalableProduct(1)->whereEnabledProduct(1)->join('warehouses', 'warehouses.id_warehouse', '=', 'products.id_warehouse')->orderBy('name_product', 'DESC')->paginate(15);
         } else {
-            $data = Product::select('products.*', 'warehouses.name_warehouse')->whereEnabledProduct(1)->join('warehouses', 'warehouses.id_warehouse', '=', 'products.id_warehouse', 'left')->paginate(15);
+            $data = Product::select('products.*', 'warehouses.name_warehouse')->whereEnabledProduct(1)->join('warehouses', 'warehouses.id_warehouse', '=', 'products.id_warehouse', 'left')->orderBy('name_product', 'ASC')->paginate(15);
         }
 
         // return Product::select('products.*', 'warehouses.name_warehouse')->where('enabled_product', '=', '1')->join('warehouses', 'warehouses.id_warehouse', '=', 'products.id_warehouse')->paginate(15);
@@ -64,7 +64,7 @@ class ProductController extends Controller
             'url' => "/products/product",
             'id' => 'id_product',
             'data' => $data,
-            'i' => (($request->input('page', 1) - 1) * 5),
+            'i' => (($request->input('page', 1) - 1) * 15),
         ];
 
 
@@ -112,33 +112,24 @@ class ProductController extends Controller
         $save = new Product();
 
         $save->name_product = strtoupper($data["name_product"]);
-        $save->description_product = strtoupper($data["description_product"]);
-        $save->code_product = strtoupper($data["code_product"]);
         $save->price_product = $data["price_product"];
 
         if (isset($data["salable_product"])) {
             $save->salable_product = $data["salable_product"];
         }
-        if (isset($data["tax_exempt_product"])) {
-            $save->tax_exempt_product = $data["tax_exempt_product"];
-        }
+
         if (isset($data["product_usd_product"])) {
             $save->product_usd_product = $data["product_usd_product"];
         }
 
         $save->id_warehouse = $data["id_warehouse"];
-        $save->id_product_category = $data["id_product_category"];
+
         $save->id_unit_product = $data["id_unit_product"];
-        $save->id_presentation_product = $data["id_presentation_product"];
+
         $save->save();
 
 
-        $message = [
-            'type' => 'success',
-            'message' => 'Se registro con éxito',
-        ];
-
-        return redirect()->route('product.index')->with('message', $message);
+        return redirect()->route('product.index')->with('success', 'Producto creado con exito');
     }
 
     public function show(Request $request, $id)
@@ -182,7 +173,7 @@ class ProductController extends Controller
         ];
 
         $conf = [
-            'title-section' => 'Producto: ' . $data->code_product . ' - ' . $data->name_product,
+            'title-section' => 'Producto: ' . $data->name_product,
             'group' => 'product-product',
             'back' => (url()->previous() == 'http://localhost:8000/products/product?param=1') ? 'product.salable' : 'product.index',
             'edit' => ['route' => 'product.edit', 'id' => $id,],
@@ -199,15 +190,13 @@ class ProductController extends Controller
     public function edit($id)
     {
 
-        $data = Product::select('products.*', 'w.name_warehouse', 'w.code_warehouse', 'c.name_product_category', 'u.name_unit_product', 'u.short_unit_product', 'pp.name_presentation_product')
+        $data = Product::select('products.*', 'w.name_warehouse', 'u.name_unit_product', 'u.short_unit_product')
             ->join('warehouses as w', 'w.id_warehouse', '=', 'products.id_warehouse', 'left')
             ->join('unit_products as u', 'u.id_unit_product', '=', 'products.id_unit_product', 'left outer')
-            ->join('product_categories as c', 'c.id_product_category', '=', 'products.id_product_category', 'left outer')
-            ->join('presentation_products as pp', 'pp.id_presentation_product', '=', 'products.id_presentation_product', 'left outer')
             ->whereIdProduct($id)->get()[0];
 
         $conf = [
-            'title-section' => 'Producto: ' . $data->code_product . ' - ' . $data->name_product,
+            'title-section' => 'Producto:' . $data->name_product,
             'group' => 'product-product',
             'back' => ['route' => "./", 'show' => true],
             'url' => '/products/product/salable',
@@ -247,57 +236,23 @@ class ProductController extends Controller
 
 
         $data['name_product'] = strtoupper($data['name_product']);
-        $data['description_product'] = strtoupper($data['description_product']);
-        $data['code_product'] = strtoupper($data['code_product']);
+
+
         $data['price_product'] = $data['price_product'];
         $data['qty_product'] = $data['qty_product'];
-
         if (isset($data['salable_product']) && $data['salable_product'] != null) {
             $data['salable_product'] = $data['salable_product'];
         } else {
             $data['salable_product'] = 0;
         }
-
         if (isset($data['product_usd_product']) && $data['product_usd_product'] != null) {
             $data['product_usd_product'] = $data['product_usd_product'];
         } else {
             $data['product_usd_product'] = 0;
         }
-
-        if (isset($data['tax_exempt_product']) && $data['tax_exempt_product'] != null) {
-            $data['tax_exempt_product'] = $data['tax_exempt_product'];
-        } else {
-            $data['tax_exempt_product'] = 0;
-        }
-
         $data['id_warehouse'] = $data['id_warehouse'];
-        $data['id_product_category'] = $data['id_product_category'];
         $data['id_unit_product'] = $data['id_unit_product'];
-        $data['id_presentation_product'] = $data['id_presentation_product'];
-
-
         Product::whereIdProduct($id)->update($data);
-
-
-
-
-        //return $data['qty_product'];
-
-
-
-        // if($data['qty_product'] != $dataSave->qty_product|| $data['price_product'] != $dataSave->price_product){
-
-        //     $save = new ProductHistory();
-        //     $save->id_product = $id;
-        //     $save->date_product_history = date('Y-m-d');
-        //     $save->price_product_history = $dataSave->price_product;
-        //     $save->qty_product_history = $dataSave->qty_product;
-        //     $save->save();
-        // }
-
-
-        // Product::whereIdProduct($id)->update($data);  
-
 
 
         $message = [
@@ -305,7 +260,7 @@ class ProductController extends Controller
             'message' => 'Se edito con éxito',
         ];
 
-        return redirect()->route('product.show', $id)->with('message', $message);
+        return redirect()->route('product.show', $id)->with('success', 'Se edito con éxito');
     }
 
     function destroy($id)
@@ -344,5 +299,25 @@ class ProductController extends Controller
     public function indexSalable()
     {
         return redirect()->route('product.index', ['param' => 1]);
+    }
+
+    public function storeRecetaWithProduct($data){
+
+        $save = new Product();
+        $save->name_product = strtoupper($data["name_product"]);
+        $save->price_product = $data["price_product"];
+        $save->salable_product = $data["salable_product"];
+        $save->product_usd_product = $data["product_usd_product"];
+        $save->id_warehouse = $data["id_warehouse"];
+        $save->id_unit_product = 1;
+        $save->qty_product = 1;
+        if(isset($data["sub_receta"])){
+            $save->sub_receta = $data["sub_receta"];
+        }
+        $save->save();
+
+        Recetas::whereIdReceta($data['id_receta'])->update(['id_product' => $save->id_product]);
+
+        return response()->json(['status' => 1]);
     }
 }

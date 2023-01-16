@@ -76,6 +76,7 @@ class PermissionTableSeeder extends Seeder
             'purchase-supplier-list', 'purchase-supplier-create', 'purchase-supplier-edit', 'purchase-supplier-delete',  
             
             'menus-list', 'menus-create', 'menus-edit', 'menus-delete',
+            'recetas-list', 'recetas-create', 'recetas-edit', 'recetas-delete',
             
         ];
      

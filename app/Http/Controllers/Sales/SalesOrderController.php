@@ -418,15 +418,13 @@ class SalesOrderController extends Controller
                 $request->param = "";
             }
             if ($request->param != "") {
-                $dataProductos =  DB::select("SELECT products.*, p.name_presentation_product, u.name_unit_product, u.short_unit_product
+                $dataProductos =  DB::select("SELECT products.*, u.name_unit_product, u.short_unit_product
                                                 FROM products 
-                                                INNER JOIN presentation_products AS p ON p.id_presentation_product = products.id_presentation_product
                                                 INNER JOIN unit_products AS u ON u.id_unit_product = products.id_unit_product
-                                                INNER JOIN warehouses AS w ON w.id_warehouse = products.id_warehouse
-                                                WHERE qty_product > 0 
-                                                AND salable_product = 1
-                                                AND name_product LIKE '%" . $request->param . "%' 
-                                                OR code_product LIKE '%" . $request->param . "%'
+
+                                                
+                                                where name_product LIKE '%" . $request->param . "%' 
+                                             
                                                 ORDER BY products.name_product ASC");
                 return response()->json(
                     [
@@ -440,13 +438,11 @@ class SalesOrderController extends Controller
                 );
             } else {
 
-                $dataProductos =  DB::select("SELECT products.*, p.name_presentation_product, u.name_unit_product, u.short_unit_product
+                $dataProductos =  DB::select("SELECT products.*, u.name_unit_product, u.short_unit_product
                                                 FROM products 
-                                                INNER JOIN presentation_products AS p ON p.id_presentation_product = products.id_presentation_product
                                                 INNER JOIN unit_products AS u ON u.id_unit_product = products.id_unit_product
-                                                INNER JOIN warehouses AS w ON w.id_warehouse = products.id_warehouse
-                                                WHERE qty_product > 0 
-                                                AND salable_product = 1
+                                               
+                                                
                                                 ORDER BY products.name_product ASC");
                 return response()->json(
                     [

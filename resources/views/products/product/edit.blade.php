@@ -20,24 +20,10 @@
                     Para guardar debe ingresar el nombre del producto
                 </div>  
             </div>
-            <div class="col-md-6">
-                <label class="form-label">Descripción del producto</label>
-                {!! Form::textarea('description_product', null, array('rows'=> 3, 'autocomplete' => 'off', 'placeholder' => 'Ingrese la descripción del producto','class' => 'form-control form-control-sm')) !!}
-                <div  class="invalid-feedback">
-                    Para guardar debe ingresar las descripción del producto
-                </div>  
-            </div>
-            <div class="col-md-3">
-                <label class="form-label">Código</label>
-                {!! Form::text('code_product', null, array('onkeyup'=>'searchCode(this.value)','id' => 'code_product', 'autocomplete' => 'off','required', 'placeholder' => 'Ingrese el código del producto','class' => 'form-control form-control-sm')) !!}
-                <div id="valido_code_product" class="invalid-feedback">
-                    Para guardar debe ingresar el código del producto
-                </div>  
-            </div>
-
+            <div class="clearfix"></div>
             <div class="col-md-3">
                 <label class="form-label">Precio del producto</label>
-                {!! Form::number('price_product', null, array( 'autocomplete' => 'off','required', 'placeholder' => 'Ingrese el el precio del producto','class' => 'form-control form-control-sm', 'min'=>'0', 'step' => '0.01')) !!}
+                {!! Form::number('price_product', null, array( 'autocomplete' => 'off','required', 'placeholder' => 'Ingrese el precio del producto','class' => 'form-control form-control-sm', 'min'=>'0', 'step' => '0.01')) !!}
                 <div  class="invalid-feedback">
                     Para guardar debe ingresar el precio del producto
                 </div>  
@@ -45,9 +31,16 @@
 
             <div class="col-md-3">
                 <label class="form-label">Cantidad</label>
-                {!! Form::number('qty_product', null, array( 'autocomplete' => 'off','required', 'placeholder' => 'Ingrese el el precio del producto','class' => 'form-control form-control-sm', 'min'=>'0', 'step' => '0.01')) !!}
+                {!! Form::number('qty_product', null, array( 'autocomplete' => 'off','required', 'placeholder' => 'Ingrese la cantidad del producto','class' => 'form-control form-control-sm', 'min'=>'0', 'step' => '0.01')) !!}
                 <div  class="invalid-feedback">
                     Para guardar debe ingresar la cantidad del producto
+                </div>  
+            </div>
+            <div class="col-md-3">
+                <label class="form-label">Merma</label>
+                {!! Form::number('merma', null, array( 'autocomplete' => 'off','required', 'placeholder' => 'Ingrese la cantidad de la merma','class' => 'form-control form-control-sm', 'min'=>'0', 'step' => '0.01')) !!}
+                <div  class="invalid-feedback">
+                    Para guardar debe ingresar la cantidad de la merma
                 </div>  
             </div>
             
@@ -59,14 +52,6 @@
                         ¿Producto Vendible?
                     </label>
                 </div> 
-            </div>
-            <div class="col-3 d-flex align-items-start justify-content-start">
-                <div class="form-check">
-                    {!! Form::checkbox('tax_exempt_product', '1', null, ['class' => 'form-check-input'],) !!}
-                    <label class="form-check-label">
-                        ¿Producto exento de IVA?
-                    </label>
-                </div>  
             </div>
             <div class="col-3 d-flex align-items-start justify-content-start">
                 <div class="form-check">
@@ -84,10 +69,6 @@
                     Para guardar debe ingresar un almacen para el producto
                 </div>  
             </div>
-            <div class="col-md-3">
-                <label class="form-label">Cateoría del producto</label>
-                {!! Form::select('id_product_category', $getCategories, null, ['class' => 'form-select form-control-sm', 'placeholder' => 'Seleccione']) !!}
-            </div>
 
             <div class="col-md-3">
                 <label class="form-label">Unidad de medida</label>
@@ -97,13 +78,7 @@
                 </div>  
             </div>
 
-            <div class="col-md-3">
-                <label class="form-label">Presentacion del producto</label>
-                {!! Form::select('id_presentation_product', $getPresentations, null, ['required', 'class' => 'form-select form-control-sm', 'placeholder' => 'Seleccione']) !!}
-                <div  class="invalid-feedback">
-                    Para guardar debe ingresar el nombre del producto
-                </div>  
-            </div>
+        
 
             
             

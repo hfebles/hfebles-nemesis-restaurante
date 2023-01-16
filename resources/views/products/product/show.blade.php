@@ -13,16 +13,8 @@
         <div class="table-responsive-lg">
             <table class="table table-bordered table-hover table-sm mb-0">
                 <tr class="align-middle">
-                    <th scope="col" width="15%">Código:</th>
-                    <td width="25%">{{$data->code_product}}</td>
                     <th scope="col" width="20%">Nombre del producto:</th>
                     <td width="40%">{{$data->name_product}}</td>
-                </tr>
-                <tr class="align-middle">
-                    <th scope="col">Numero de parte:</th>
-                    <td>{{$data->part_number_product ?? ''}}</td>
-                    <th scope="col">Descripción del producto:</th>
-                    <td>{{$data->description_product}}</td>
                 </tr>
                 <tr class="align-middle">
                     <th scope="col">Precio del producto:</th>
@@ -60,25 +52,6 @@
                         @endswitch
                     </td>
                     <td>
-                        @switch($data->tax_exempt_product)
-                            @case(1)
-                                <div class="form-check ml-1">
-                                    <input class="form-check-input" type="checkbox" disabled checked>
-                                    <label class="form-check-label">
-                                        ¿Producto exento de IVA?
-                                    </label>
-                                </div>
-                                @break
-                            @default
-                                <div class="form-check ml-1">
-                                    <input class="form-check-input" type="checkbox" disabled>
-                                    <label class="form-check-label">
-                                        ¿Producto exento de IVA?
-                                    </label>
-                                </div>
-                        @endswitch
-                    </td>
-                    <td>
                         @switch($data->product_usd_product)
                             @case(1)
                                 <div class="form-check ml-1">
@@ -101,14 +74,8 @@
                 <tr class="align-middle">
                     <th scope="col">Inventario:</th>
                     <td>{{$data->code_warehouse ?? 'N/A' }} - {{$data->name_warehouse ?? 'N/A' }} </td>
-                    <th scope="col">Cateoría del producto:</th>
-                    <td>{{$data->name_product_category ?? 'N/A'}}</td>
-                </tr>
-                <tr class="align-middle">
                     <th scope="col">Unidad de medida:</th>
                     <td>{{$data->short_unit_product ?? 'N/A' }} - {{$data->name_unit_product ?? 'N/A' }}</td>
-                    <th scope="col">Presentacion del productoo:</th>
-                    <td>{{$data->name_presentation_product ?? 'N/A' }}</td>
                 </tr>
             </table>
         </div>
